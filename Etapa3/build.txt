@@ -1,0 +1,54 @@
+
+# Cria a imagem:
+
+docker build -t appweb  -f Dockerfile .
+
+ou
+
+sudo docker build -t appweb  -f Dockerfile .
+
+
+
+# Executa o container mantendo o log de execução (boa opção para debug):
+
+docker run -p 80:8080 appweb
+
+ou
+
+sudo docker run -p 80:8080 appweb
+
+
+
+# Executa o container em modo interativo:
+
+docker run --name appweb1 -it appweb
+
+ou 
+
+sudo docker run --name appweb1 -it appweb
+
+
+
+# Executa o container em background:
+
+docker run -d -p 80:8080 appweb
+
+ou 
+
+sudo docker run -d -p 80:8080 appweb
+
+
+
+# Comandos auxiliares:
+
+# Visualiza container em execução: sudo docker ps -a
+# Remove container: sudo docker rm -f <id-container>
+
+# Visualiza imagens criadas: sudo docker images
+# Remove imagem: sudo docker rmi <id-imagem>
+
+
+
+
+
+
